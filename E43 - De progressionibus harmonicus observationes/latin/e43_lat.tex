@@ -1,0 +1,123 @@
+\documentclass[12pt, letterpaper]{article}
+
+%\usepackage[letterpaper,left=0.7in,right=0.7in,top=\dimexpr15mm+1.5\baselineskip,bottom=0.7in]{geometry}
+\usepackage{amsmath}
+\usepackage{amsthm}
+%\usepackage{pxfonts}
+\usepackage[]{newpxtext}
+\usepackage[varg,vvarbb]{newpxmath}
+\usepackage{inconsolata}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{float}
+\usepackage{mathtools}
+\usepackage{mathrsfs}
+\usepackage{anyfontsize}
+
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage[table]{xcolor}
+
+\usepackage{circuitikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage{wrapfig}
+\usepackage{setspace}
+\usepackage[export]{adjustbox}
+\usepackage{tikzsymbols}
+
+\usepackage[bottom]{footmisc}
+\usepackage{hyperref}
+
+\linespread{1.2}
+
+\begin{document}
+\title{De progressionibus harmonicis observationes.}
+\author{Auctore \\ \emph{Leonh. Eulero.}\footnote{
+        Copied by Walter Jacob.
+        Every attempt has been made to create an accurate copy of the original
+        paper, with a few exceptions. I have made the switch from consonantal
+        \emph{u} to \emph{v}, where it is common (\emph{e.g.}, \emph{sive}
+        instead of \emph{siue}) and I only use contemporary orthographical
+        symbols (so no long \emph{s}). I also fixed several punctuation or
+        capitalization errors; \emph{e.g.}, line 11 of subsection 3 in the
+        original has a comma followed by, "\emph{Ex quo \dots}," which I
+        have changed to a period. Otherwise, any remaining errors are mine.
+    }}
+\date{}
+\maketitle
+
+\subsubsection*{\S. 1.}
+Progressionum harmonicarum nomine intelliguntur
+omnes series fractionum, quarum numeratores sunt
+aequales inter se, denominatores vero progressionem
+arithmeticam constituunt. Huiusmodi ergo
+forma generalis est
+$\frac{c}{a}$, $\frac{c}{a+b}$, $\frac{c}{a+2b}$, $\frac{c}{a+3b}$, etc.
+Quique enim tres termini contigui ut
+$\frac{c}{a+b}$, $\frac{c}{a+2b}$, $\frac{c}{a+3b}$, hanc
+habent proprietatem, ut differentiae extremorum a medio
+sint ipsis extremis proportionales. Scilicet est
+$\frac{c}{a+b} - \frac{c}{a+2b} : \frac{c}{a+2b} - \frac{c}{a+3b} = \frac{c}{a+b} : \frac{c}{a+3b}.$
+Cum autem haec sit
+proprietas proportionis harmonicae; vocatae sunt istiusmodi
+fractionum series progressiones harmonicae. Vocari
+etiam possent reciprocae primi ordinis, quia in termino
+generali $\frac{c}{a+(n-1)b}$ index $n$ unicam eamque negativam
+habet dimensionem.
+
+\subsubsection*{\S. 2.}
+Quanquam in his seriebus termini perpetuo decrescunt; tamen summa huiusmodi
+serei in infinitum continuatae semper est infinita.
+Ad hoc demonstrandum non opus est methodo hasce series summandi; sed veritas
+facile ex sequente principio elucebit.
+Series quae in infinitum continuata summam habet finitam, etiamsi se duplo
+longius continuetur nullum accipiet augmentum, sed id quod post infinitum
+adiicitur cogitatione, re vera erit infinite parvum.
+Nisi enim hoc ita se haberet, summa seriei etsi in infinitum continuatae
+non esset determinata et propterea non finita.
+Ex quo consequitur, si id, quod ex continuatione ultra terminum infinitesimum
+oritur, sit finitae magnitudinis, summam seriei necessario infinitam esse
+debere.
+Ex hoc principio iudicare poterimus, utrum seriei cuiusque propositae summa
+sit infinita an finita.
+
+\subsubsection*{\S. 3.}
+Sit itaque series $\frac{c}{a}$, $\frac{c}{a+b}$, $\frac{c}{a+2b}$, etc. in
+infinitum continuata, terminusque infinitesimus $\frac{c}{a+(i-1)b}$,
+denotante $i$ numerum infinitum, qui sit index huius termini.
+Iam haec series ulterius continuetur a termino $\frac{c}{a+ib}$
+usque as terminum $\frac{c}{a+(ni-1)b}$ cuius exponens est
+$ni$. Horum terminorum igitur insuper adiectorum numerus
+est $(n-1)i$; summa eorum vero minor erit quam $\frac{(n-1)ic}{a+ib}$
+maior vero quam $\frac{(n-1)ic}{a+(ni-1)b}$. Sed quia $i$
+est infinite magnum, evanescet $a$ in utroque denominatore.
+Quare summa maior erit quam $\frac{(n-1)c}{nb}$ at minor
+quam $\frac{(n-1)c}{b}$. Ex quo perspicitur hanc summam esse
+finitam, atque consequenter seriei propositae $\frac{c}{a}$, $\frac{c}{a+b}$,
+etc. in infinitum continuatae summam infinite magnam.
+
+\subsubsection*{\S. 4.}
+Huius autem summae terminorum ab $i$ ad
+$ni$ limites propiores ex sequentibus proportionis harmonicae
+proprietatibus eliciuntur. Scilicet omnis proportio
+harmonica its est comparata, ut terminus medius minor
+sit quam pars tertia summae terminorum omnium. Hanc
+ob rem terminus medius inter $\frac{c}{a+ib}$ et $\frac{c}{a+(ni-1)b}$, qui est
+$\frac{c}{a+\frac{ni+i-1}{2}b}$, ductus in terminorum numerum $(n-1)i$,
+seu $\frac{(n-1)ic}{a+\frac{ni+i-1}{2}b}$ minor erit quam summa terminorum.
+Sive terminorum summa hinc maior erit quam
+$\frac{2(n-1)c}{(n+1)b}$ ob $i$ inifinitum. Praeterea medium arithmeticum
+inter terminos extremos maius est parte tertia
+summae terminorum. Ex hoc sequitur fore etiam in
+serie harmonica terminorum summam minorem quam
+$(n-1)i$ in medium arithmeticum terminorum extremorum,
+quod est $\frac{(2a+(ni+i-1)b)c}{2(a+ib)(a+(ni-1)b)}$ seu $\frac{(n+1)c}{2nib}$,
+ductum. Quare summa erit minor quam $\frac{(n^2 - 1)c}{2nb}$, ita ut
+hi duo limites sint $\frac{2(n-1)c}{(n+1)b}$ et $\frac{(n^2 - 1)c}{2nb}$, adeoque summa
+proxime $= \frac{(n-1)c}{b\sqrt{n}}$ quod est medium proportionale inter
+limites.
+
+
+\end{document}

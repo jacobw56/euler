@@ -1,0 +1,149 @@
+\documentclass[12pt, letterpaper]{article}
+
+%\usepackage[letterpaper,left=0.7in,right=0.7in,top=\dimexpr15mm+1.5\baselineskip,bottom=0.7in]{geometry}
+\usepackage{amsmath}
+\usepackage{amsthm}
+%\usepackage{pxfonts}
+\usepackage[]{newpxtext}
+\usepackage[varg,vvarbb]{newpxmath}
+\usepackage{inconsolata}
+\usepackage[T1]{fontenc}
+\usepackage{float}
+\usepackage{mathtools}
+\usepackage{mathrsfs}
+\usepackage{anyfontsize}
+
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage[table]{xcolor}
+
+\usepackage{circuitikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage{wrapfig}
+\usepackage{setspace}
+\usepackage[export]{adjustbox}
+\usepackage{tikzsymbols}
+
+\usepackage[bottom]{footmisc}
+\usepackage{hyperref}
+
+\linespread{1.2}
+
+\begin{document}
+\title{Observations on harmonic progressions\footnote{Originally published as \emph{De progressionibus harmonicis observationes.} Commentarii academiae scientiarum Petropolitanae, Volume 7, pp. 150--161. Published in \emph{Opera Omnia}, Series 1, Volume 14, pp. 87--100.}}
+\author{Leonhard Euler\footnote{Translation by Walter Jacob, \href{jacobw0@rowan.edu}{\nolinkurl{jacobw0@rowan.edu}}, Department of Mathematics, Rowan University.}}
+\date{}
+\maketitle
+
+\subsubsection*{Translation notes.}
+I have generally tried to maintain the tone of the original, while
+translating the article into an idiom that can be understood by contemporary
+English-speaking mathematicians. To this end, the term \emph{series} has been
+translated as ``sequence'' when appropriate, and the \emph{etc.} commonly used
+by Euler to denote continuation has been replaced by the contemporary ``\ldots''.
+I have also added emphasis to new definitions, which is common in contemporary
+textbooks and articles.
+Otherwise, Euler's notation has been kept, with the exception that some
+formulas are set in display mode to increase their readability. Any mathematical
+errors are likely to be mine.
+
+\subsubsection*{\S. 1.}
+By the name of \emph{harmonic progressions} are understood all sequences of
+fractions in which the numerators are equal among themselves and the
+denominators form a true arithmetic progression.
+Thus the general form is given by
+$\frac{c}{a}$, $\frac{c}{a+b}$, $\frac{c}{a+2b}$, $\frac{c}{a+3b}$, \ldots.
+Indeed, each three consecutive terms,
+$\frac{c}{a+b}$, $\frac{c}{a+2b}$, $\frac{c}{a+3b}$,
+have the property that the differences of the outer terms and the middle one
+are proportional to the to the outer terms themselves. Namely, we have
+\[
+    \frac{c}{a+b} - \frac{c}{a+2b} : \frac{c}{a+2b} - \frac{c}{a+3b} = \frac{c}{a+b} : \frac{c}{a+3b}.
+\]
+Further, since this is the property of \emph{harmonic proportion}, these
+sequences of fractions are called harmonic progressions.
+They may also be called \emph{reciprocals of the first order}, since one is
+subtracted from the index $n$ in the general term $\frac{c}{a+(n-1)b}$.
+
+\subsubsection*{\S. 2.}
+Although in these sequences the terms continually decrease, nevertheless the
+sum of the terms of such a sequence continued to infinity is always infinite.
+To demonstrate this, there is no need for a method of summing these series;
+but the truth will easily be made clear from the following principle.
+A series which, when continued to infinity, has a finite sum, even if it is
+continued twice as long, will accept no increase, and that which is added
+after infinity will actually be infinitely small.
+For if this were not the case, the sum of the series, even if continued to
+infinity, would not be determined and therefore not finite.
+From this it follows that if that which arises from continuation beyond the
+infinite term is of finite magnitude, the sum of the series must necessarily
+be infinite.
+From this principle, we can judge whether the sum of any given series is
+infinite or finite.\footnote{
+    This passage is more than a little cumbersome, thanks mostly to a lack
+    of the formal idea of limits, but  Euler is giving a
+    generalization of the standard undergraduate proof of the divergence
+    of the harmonic series; namely, that you can always group some finite
+    number of successive terms together to get a sum greater than or equal
+    to some finite magnitude. In proofs for the divergence of the harmonic
+    series, it is customary to show that such groupings result in sums
+    greater than or equal to $\frac{1}{2}$. Here, the only difference is
+    the $a$ in the denominator. To get rid of it, Euler will start at
+    the "infinite" term, so that this $a$ is completely dominated and
+    can be disregarded, leading to a convenient cancellation, as we will
+    see in the next subsection. In contemporary usage, we would simply
+    take "sufficiently large values" to neutralize this $a$.
+}
+
+\subsubsection*{\S. 3.}
+Indeed, let the series $\frac{c}{a}$, $\frac{c}{a+b}$, $\frac{c}{a+2b}$, \ldots
+be continued to infinity, and consider the term $\frac{c}{a+(i-1)b}$,
+where $i$ denotes an infinite number, which is the index of this
+term.\footnote{
+    Euler starts at the "infinite" term, but really he just means that for
+    sufficiently large indices $i$, the number $a$ will be dominated in such
+    a way that it can be disregarded. He will use this in a few sentences to
+    gather bounds on the sum of each consecutive $(n-1)i$ terms of the
+    sequence.
+}
+Now let this series be further continued from the term $\frac{c}{a+ib}$ to
+the term $\frac{c}{a+(ni-1)b}$ whose exponent is $ni$.
+The number of these additionally appended terms is therefore $(n-1)i$;
+their sum, however, will be less than $\frac{(n-1)ic}{a+ib}$ but greater
+than $\frac{(n-1)ic}{a+(ni-1)b}$.
+But since $i$ is infinitely large, $a$ will vanish in both denominators.
+Hence the sum will be greater than $\frac{(n-1)c}{nb}$ but less than
+$\frac{(n-1)c}{b}$.
+From this it is clear that this sum is finite, and consequently the sum of
+the given series $\frac{c}{a}$, $\frac{c}{a+b}$, \ldots, continued to infinity,
+is infinitely large.
+
+\subsubsection*{\S. 4.}
+Further, tighter limits on the sum of the terms of the seqeunce from $i$ to
+$ni$ are derived by the properties of harmonic proportions\footnote{
+    Of $(n-1)i$ consecutive terms, as in subsection 1 where he examines three
+    such consecutive terms.
+}.
+Namely, every harmonic proportion is such that the middle term is less than
+one-third of the sum of all of the terms.
+For this reason, the middle term between $\frac{c}{a+ib}$ and
+$\frac{c}{a+(ni-1)b}$, which is $\frac{c}{a+\frac{ni+i-1}{2}b}$, multiplied by
+the number of terms $(n-1)i$, or $\frac{(n-1)ic}{a+\frac{ni+i-1}{2}b}$,
+will be less than the sum of the terms.
+Therefore, the sum of the terms will be greater than $\frac{2(n-1)c}{(n+1)b}$
+because $i$ is infinite.
+Furthermore, the arithmetic mean between the extreme terms is greater than
+one-third of the sum of the terms.
+From this, it follows that in a harmonic series the sum of the terms will be
+less than $(n-1)i$ times the arithmetic mean of the extreme terms multiplied,
+which is $\frac{(2a+(ni+i-1)b)c}{2(a+ib)(a+(ni-1)b)}$ or $\frac{(n+1)c}{2nib}$.
+Therefore, the sum will be less than $\frac{(n^2 - 1)c}{2nb}$, so that these
+two limits are $\frac{2(n-1)c}{(n+1)b}$ and $\frac{(n^2 - 1)c}{2nb}$, and
+thus the sum is approximately $\frac{(n-1)c}{b\sqrt{n}}$, which is the mean
+between the limits.
+
+
+
+\end{document}
